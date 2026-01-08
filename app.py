@@ -31,11 +31,11 @@ st.markdown("### Input File")
 
 c1, c2, c3 = st.columns(3)
 with c1:
-    forecast_file = st.file_uploader("Forecast CSV (Wajib)", type=["csv"])
+    forecast_file = st.file_uploader("Forecast CSV", type=["csv"])
 with c2:
-    evaluated_file = st.file_uploader("Evaluated CSV (Opsional)", type=["csv"])
+    evaluated_file = st.file_uploader("Evaluated CSV", type=["csv"])
 with c3:
-    historical_file = st.file_uploader("Historical CSV (Opsional)", type=["csv"])
+    historical_file = st.file_uploader("Historical CSV", type=["csv"])
 
 load_btn = st.button("Load & Tampilkan", type="primary", use_container_width=True)
 
@@ -130,7 +130,7 @@ if load_btn and forecast_file:
             """)
 
             # METRIKS
-            st.subheader("Metriks Evaluasi (opsional)")
+            st.subheader("Metriks Evaluasi")
             if df_eval is not None:
                 st.dataframe(df_eval, hide_index=True, use_container_width=True)
             else:
