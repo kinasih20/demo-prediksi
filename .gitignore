@@ -1,0 +1,16 @@
+venv/
+.venv/
+env/
+
+__pycache__/
+*.pyc
+
+.DS_Store
+Thumbs.db
+
+/model
+*.keras
+*.h5
+*.pkl
+
+*.csv
